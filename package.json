@@ -2,10 +2,10 @@
   "name": "asb-frontend",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "14.x"
-  },
   "dependencies": {
+    "@mdi/font": "^5.9.55",
+    "@mdi/js": "^5.9.55",
+    "@mdi/react": "^1.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -43,7 +43,6 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.1",
     "url-loader": "^4.1.1",
-    "webpack": "^5.19.0",
     "webpack-dev-server": "^3.11.2"
   }
 }

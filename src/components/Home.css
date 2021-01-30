@@ -8,6 +8,10 @@ nav{
     display: flex;
     list-style-type: none;
 }
+.nav-icon{
+    margin-left: -40%;
+    padding: 0 .6em;
+}
 .li{
     margin-left: 20%;
 }
@@ -64,6 +68,9 @@ th{
 .body ul{
     margin-left: -10%;
 }
+.body li{
+    margin-top: -5%;
+}
 .sub{
     margin-top: 3%;
     font-size: 12px;
@@ -74,4 +81,21 @@ th{
 }
 .info p{
     padding: .2em;
+    font-size: 14px;
+}
+.icon{
+    padding-right: .8em;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+h2{
+    margin-top: 2%;
+}
+.metric p{
+    margin-left: -60%;
+}
+.nav-right-icon{
+    padding: 0 .8em;
 }

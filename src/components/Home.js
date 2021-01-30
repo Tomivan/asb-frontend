@@ -1,4 +1,22 @@
 import React, {useEffect, useState} from 'react';
+import FE from '../assets/images/FE.svg';
+import home from '../assets/images/home.svg';
+import Entries from '../assets/images/Entries.svg';
+import Divisions from '../assets/images/Divisions.svg';
+import Notification from '../assets/images/Notification.png';
+import Summary from '../assets/images/Summary.svg';
+import Phone from '../assets/images/Phone.svg';
+import Mail from '../assets/images/Mail.svg';
+import Module from '../assets/images/Module.svg';
+import Location from '../assets/images/Location.svg';
+import Journal from '../assets/images/Journal.svg';
+import Fingerprint from '../assets/images/Fingerprint.svg';
+import Customers from '../assets/images/Customers.svg';
+import Union from '../assets/images/Union.svg';
+import Vector from '../assets/images/Vector.png';
+import Icon from '@mdi/react';
+import { mdiInformationOutline } from '@mdi/js';
+import { mdiCheckboxBlankOutline } from '@mdi/js';
 import './Home.css';
 
 const Home = () => {
@@ -25,85 +43,91 @@ const Home = () => {
   return(
     <div>
         <nav>
-            <img src={require('../assets/images/FE.svg')} alt="" className="logo"/>
+            <img src={FE} alt="" className="logo"/>
             <p>FE Engineer Test 1</p>
             <ul className="ul">
-                <li className="li"><img src={require("../assets/images/Home.svg")} alt=""/>Home</li>
-                <li className="li"><img src={require('../assets/images/Entries.svg')} alt=""/>Entries</li>
-                <li className="li"><img src={require('../assets/images/Divisions.svg')} alt=""/>Divisions</li>
+                <div className="nav-li">
+                <li className="li"><img src={home} alt="" className="nav-icon"/>Home</li>
+                </div>
+                <div className="nav-li">
+                <li className="li"><img src={Entries} alt="" className="nav-icon"/>Entries</li>
+                </div>
+                <div className="nav-li">
+                <li className="li"><img src={Divisions} alt="" className="nav-icon"/>Divisions</li>
+                </div>
             </ul>
             <div className="nav-right">
                 <input type="text" />
-                <img src={require('../assets/images/Notification.png')} alt=""/>
-                <img src={require('../assets/images/Profile.svg')} alt=""/>
+                <img src={Notification} alt="" className="nav-right-icon"/>
+                <img src={Customers} alt="" className="nav-right-icon"/>
             </div>
         </nav>
         <section className="metrics">
             <div className="metric">
                 <div className="top">
                     <h2>31454</h2>
-                    <i></i>
+                    <Icon path={mdiInformationOutline} size={1} color="grey"/>
                 </div>
                 <p>Ongoing metric</p>
             </div>
             <div className="metric">
                 <div className="top">
                     <h2>2344</h2>
-                    <i></i>
+                    <Icon path={mdiInformationOutline} size={1} color="grey"/>
                 </div>
                 <p>Past metric</p>
             </div>
             <div className="metric">
                 <div className="top">
                     <h2>14224</h2>
-                    <i></i>
+                    <Icon path={mdiInformationOutline} size={1} color="grey"/>
                 </div>
                 <p>Missed metric</p>
             </div>
             <div className="metric">
                 <div className="top">
                     <h2>635</h2>
-                    <i></i>
+                    <Icon path={mdiInformationOutline} size={1} color="grey"/>
                 </div>
                 <p>Failed metric</p>
             </div>
             <div className="metric">
                 <div className="top">
                     <h2>11334</h2>
-                    <i></i>
+                    <Icon path={mdiInformationOutline} size={1} color="grey"/>
                 </div>
                 <p>Pending metric</p>
             </div>
         </section>
         <section className="summary">
             <div className="heading">
-                <img src={require('../assets/images/Summary.svg')} alt=""/>
+                <img src={Summary} alt="" className="icon"/>
                 <h4>Division Summary</h4>
             </div>
             <div className="body">
-                <img src={require('../assets/images/Phone.svg')} alt="" />
+                <img src={Phone} alt="" className="icon"/>
                 <p>0801 234 5678</p>
             </div>
             <div className="body">
-                <img src={require('../assets/images/Mail.svg')} alt="" />
+                <img src={Mail} alt="" className="icon"/>
                 <p>asbfefr@gmail.com</p>
             </div>
             <div className="body">
-                <img src={require('../assets/images/Location.svg')} alt="" />
+                <img src={Location} alt="" className="icon"/>
                 <p>Mojidi, Lagos</p>
             </div>
             <div className="body">
-                <img src={require('../assets/images/Journal.svg')} alt="" />
+                <img src={Journal} alt="" className="icon"/>
                 <p>2 Journal entries</p>
             </div>
             <div className="body">
-                <img src={require('../assets/images/Fingerprint.svg')} alt="" />
+                <img src={Fingerprint} alt="" className="icon"/>
                 <p>24 fingerprints enrolled</p>
             </div>
         </section>
         <section className="module">
             <div className="heading">
-                <img src={require('../assets/images/Summary.svg')} alt=""/>
+                <img src={Module} alt="" className="icon"/>
                 <h4>Module History</h4>
             </div>
             <div className="body">
@@ -133,7 +157,7 @@ const Home = () => {
         <table>
             <thead>
                 <tr>
-                    <th></th>
+                    <th><Icon path={mdiCheckboxBlankOutline} size={1}/></th>
                     <th></th>
                     <th>Name</th>
                     <th>Location</th>
@@ -145,14 +169,14 @@ const Home = () => {
             </thead>
             <tbody>
             {state && state.map( data =>(<tr>
-                    <td></td>
-                    <td></td>
+                    <td><Icon path={mdiCheckboxBlankOutline} size={1}/></td>
+                    <td><img src={Union} alt=""/></td>
                     <td>{data.NAME}</td>
                     <td>{data.LOCATION}</td>
                     <td>{data.STATUS}</td>
                     <td>{data.ENTRIES.Entry} <p className="sub">{data.ENTRIES.Entry_type}</p></td>
                     <td>{data.RISK_PROFILE}</td>
-                    <td></td>
+                    <td><img src={Vector} alt=""/></td>
                 </tr>))}
             </tbody>
         </table>
